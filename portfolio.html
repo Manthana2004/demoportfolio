@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manthana Portfolio</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+            scroll-behavior:smooth;
+        }
+
+        body{
+            background:#0f172a;
+            color:white;
+            line-height:1.6;
+        }
+
+        /* Navbar */
+
+        header{
+            background:#111827;
+            padding:20px 50px;
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            font-size:32px;
+            color:cyan;
+            font-weight:bold;
+        }
+
+        nav ul{
+            display:flex;
+            list-style:none;
+        }
+
+        nav ul li{
+            margin-left:25px;
+        }
+
+        nav ul li a{
+            text-decoration:none;
+            color:white;
+            font-size:18px;
+            transition:0.3s;
+        }
+
+        nav ul li a:hover{
+            color:cyan;
+        }
+
+        /* Hero Section */
+
+        .hero{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            background:linear-gradient(to right,#0f172a,#1e293b);
+            padding:20px;
+        }
+
+        .hero-content h2{
+            font-size:35px;
+        }
+
+        .hero-content h1{
+            font-size:90px;
+            color:cyan;
+            margin:10px 0;
+        }
+
+        .hero-content p{
+            font-size:24px;
+            margin-bottom:30px;
+            color:#d1d5db;
+        }
+
+        .btn{
+            display:inline-block;
+            text-decoration:none;
+            background:cyan;
+            color:black;
+            padding:14px 30px;
+            border-radius:10px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:white;
+            transform:scale(1.05);
+        }
+
+        /* Sections */
+
+        section{
+            padding:80px 10%;
+        }
+
+        section h2{
+            text-align:center;
+            font-size:42px;
+            margin-bottom:40px;
+            color:cyan;
+        }
+
+        /* About */
+
+        .about p{
+            max-width:900px;
+            margin:auto;
+            text-align:center;
+            font-size:20px;
+            color:#d1d5db;
+        }
+
+        /* Skills */
+
+        .skills-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:25px;
+        }
+
+        .skill-card{
+            background:#1e293b;
+            padding:30px;
+            border-radius:15px;
+            text-align:center;
+            font-size:22px;
+            font-weight:bold;
+            transition:0.3s;
+            box-shadow:0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .skill-card:hover{
+            background:cyan;
+            color:black;
+            transform:translateY(-8px);
+        }
+
+        /* Projects */
+
+        .project-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:30px;
+        }
+
+        .project-card{
+            background:#1e293b;
+            padding:30px;
+            border-radius:15px;
+            transition:0.3s;
+            box-shadow:0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .project-card:hover{
+            transform:scale(1.05);
+        }
+
+        .project-card h3{
+            color:cyan;
+            margin-bottom:15px;
+            font-size:26px;
+        }
+
+        .project-card p{
+            color:#d1d5db;
+        }
+
+        /* Contact */
+
+        .contact{
+            text-align:center;
+        }
+
+        .contact p{
+            margin:15px 0;
+            font-size:22px;
+            color:#d1d5db;
+        }
+
+        /* Footer */
+
+        footer{
+            background:#111827;
+            text-align:center;
+            padding:25px;
+            margin-top:40px;
+            color:#9ca3af;
+        }
+
+        /* Responsive */
+
+        @media(max-width:768px){
+
+            nav{
+                flex-direction:column;
+            }
+
+            nav ul{
+                margin-top:15px;
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+
+            .hero-content h1{
+                font-size:55px;
+            }
+
+            .hero-content h2{
+                font-size:28px;
+            }
+
+            .hero-content p{
+                font-size:18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <header>
+        <nav>
+            <div class="logo">Manthana</div>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h2>Hello, I'm</h2>
+
+            <h1>Manthana</h1>
+
+            <p>
+                Java Full Stack Developer | React Developer | AI & ML Enthusiast
+            </p>
+
+            <a href="#projects" class="btn">View Projects</a>
+
+        </div>
+
+    </section>
+
+    <!-- About -->
+
+    <section class="about" id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am a passionate Java Full Stack Developer with strong knowledge in 
+            frontend and backend technologies. I enjoy building responsive web 
+            applications, AI-based systems, and modern user interfaces. 
+            I am always eager to learn new technologies and improve my skills.
+        </p>
+
+    </section>
+
+    <!-- Skills -->
+
+    <section id="skills">
+
+        <h2>Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill-card">Java</div>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">React JS</div>
+            <div class="skill-card">SQL</div>
+            <div class="skill-card">Machine Learning</div>
+
+        </div>
+
+    </section>
+
+    <!-- Projects -->
+
+    <section id="projects">
+
+        <h2>Projects</h2>
+
+        <div class="project-container">
+
+            <div class="project-card">
+
+                <h3>CyberChain</h3>
+
+                <p>
+                    Secure document verification system using Blockchain and Artificial Intelligence.
+                </p>
+
+            </div>
+
+            <div class="project-card">
+
+                <h3>Deep Mist</h3>
+
+                <p>
+                    Deep Learning-assisted healthcare framework for heart disease prediction.
+                </p>
+
+            </div>
+
+            <div class="project-card">
+
+                <h3>Food Ordering App</h3>
+
+                <p>
+                    Responsive food ordering application developed using React JS.
+                </p>
+
+            </div>
+
+            <div class="project-card">
+
+                <h3>Employee Leave System</h3>
+
+                <p>
+                    Full-stack leave management system using React, Java, and MySQL.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+
+    <section class="contact" id="contact">
+
+        <h2>Contact Me</h2>
+
+        <p>Email : manthana@example.com</p>
+
+        <p>Phone : +91 9876543210</p>
+
+        <p>LinkedIn : linkedin.com/in/manthana</p>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>© 2026 Manthana Portfolio | All Rights Reserved</p>
+
+    </footer>
+
+</body>
+</html>
